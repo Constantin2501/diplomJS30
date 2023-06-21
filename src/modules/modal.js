@@ -1,13 +1,14 @@
 
 const modal = () => {
-    const modalMenu = document.querySelector('.modal')
+    const modalCallback = document.querySelector('.modal-callback')
     const modalOverlay = document.querySelector('.modal-overlay')
-    const modalBtn = document.querySelector('.callback-btn')
+    const modalBtn = document.querySelector('.modalBtn')
 
-    console.log(modalMenu);
-    console.log(modalOverlay);
-    console.log(modalBtn);
 
+    modalBtn.addEventListener('click', () => {
+        modalCallback.style.display = 'block'
+        modalOverlay.style.display = 'block'
+    })
 
 }
 
