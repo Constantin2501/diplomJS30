@@ -1,0 +1,1 @@
+(()=>{"use strict";(()=>{const o=document.querySelector(".modal"),e=document.querySelector(".modal-overlay"),l=document.querySelector(".callback-btn");console.log(o),console.log(e),console.log(l),console.log("puk"),console.log(document)})()})();
