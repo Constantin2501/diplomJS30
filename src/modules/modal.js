@@ -10,6 +10,12 @@ const modal = () => {
         modalOverlay.style.display = 'block'
     })
 
+    modalCallback.addEventListener('click', (e) => {
+        if (!e.target.closest('.modal-callback') || e.target.classList.contains('modal-close')) {
+            modalCallback.style.display = 'none'
+            modalOverlay.style.display = 'none'
+        }
+    })
 }
 
 export default modal
