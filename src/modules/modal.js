@@ -3,19 +3,22 @@ const modal = () => {
     const modalCallback = document.querySelector('.modal-callback')
     const modalOverlay = document.querySelector('.modal-overlay')
     const modalBtn = document.querySelector('.modalBtn')
+    const body = document.querySelector('body')
 
-
-    modalBtn.addEventListener('click', () => {
-        modalCallback.style.display = 'block'
-        modalOverlay.style.display = 'block'
-    })
-
-    modalCallback.addEventListener('click', (e) => {
-        if (!e.target.closest('.modal-callback') || e.target.classList.contains('modal-close')) {
+    
+    body.addEventListener('click', (e) => {
+        console.log(e.target);
+        if (e.target.classList.contains('modal-close') || !e.target.closest('.modal-callback' )) {
             modalCallback.style.display = 'none'
             modalOverlay.style.display = 'none'
         }
+
+        if (e.target.classList.contains('modalBtn')) {
+            modalCallback.style.display = 'block'
+            modalOverlay.style.display = 'block'
+        }
     })
+    
 }
 
 export default modal
