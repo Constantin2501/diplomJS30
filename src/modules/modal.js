@@ -6,7 +6,6 @@ const modal = () => {
 
 
     body.addEventListener('click', (e) => {
-        console.log(e.target);
         if (e.target.classList.contains('modal-close') || !e.target.closest('.modal-callback' )) {
             modalCallback.style.display = 'none'
             modalOverlay.style.display = 'none'
